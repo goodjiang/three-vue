@@ -47,17 +47,12 @@ html,body,h1,h2,h3,h4,p,ul,li{
   flex-direction: column;
 
 }
-footer{
-  height: 50px;
-  text-align: center;
-  background: blue
-}
-
 section{
   flex: 1;
   overflow: auto;
 }
 footer{
+  height: 50px;
   display: flex;
   justify-content: space-around;
   background: rgba(247, 247, 247, .8);
@@ -71,6 +66,7 @@ footer span{
   flex-direction: column;
   justify-content: center;
   font-size: 24px;
+  text-align: center;
 }
 footer span .iconfont{
  

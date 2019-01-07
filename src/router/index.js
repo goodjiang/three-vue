@@ -15,6 +15,10 @@ import Traincamp from "@/components/Traincamp"
 import Xly from "@/components/Xly"
 import Shihe from "@/components/Shihe"
 import Jiaolian from "@/components/Jiaolian"
+import Mydetail from "@/components/Mydetail"
+import Mytrain from "@/components/Mytrain"
+import Mymethod from "@/components/Mymethod"
+
 
 
 Vue.use(Router)
@@ -62,6 +66,18 @@ export default new Router({
       ]
     },
     {
+      path:"/mydetail",
+      component:Mydetail
+    },
+    {
+      path:"/mymethod/:id",
+      component:Mymethod
+    },
+    {
+      path:"/mytrain/:id",
+      component:Mytrain
+    },
+    {
       path:"/videotrain",
       component:Videotrain
     },
@@ -89,6 +105,8 @@ export default new Router({
       path:"/jiaolian",
       component:Jiaolian
     }
+    
+   
   ]
 })
 
