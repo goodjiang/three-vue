@@ -18,8 +18,13 @@ import Jiaolian from "@/components/Jiaolian"
 import Mydetail from "@/components/Mydetail"
 import Mytrain from "@/components/Mytrain"
 import Mymethod from "@/components/Mymethod"
-
-
+import Myhistory from "@/components/Myhistory"
+import Myrun from "@/components/Myrun"
+import Myfriend from "@/components/Myfriend"
+import Myfriendweek from "@/components/Myfriendweek"
+import Myfriendmonth from "@/components/Myfriendmonth"
+import Myaddfriend from "@/components/Myaddfriend"
+import Myvip from "@/components/Myvip"
 
 Vue.use(Router)
 
@@ -76,6 +81,38 @@ export default new Router({
     {
       path:"/mytrain/:id",
       component:Mytrain
+    },
+    {
+      path:"/myhistory",
+      name:"myhistory",
+      component:Myhistory
+    },
+    {
+      path:"/myrun",
+      component:Myrun
+    },
+    {
+      path:"/myfriend",
+      component:Myfriend,
+      redirect:"/myfriendweek",
+      children:[
+        {
+          path:"/myfriendweek",
+          component:Myfriendweek
+        },
+        {
+          path:"/myfriendmonth",
+          component:Myfriendmonth
+        }
+      ]
+    },
+    {
+      path:"/myaddfriend",
+      component:Myaddfriend
+    },
+    {
+      path:"/myvip",
+      component:Myvip
     },
     {
       path:"/videotrain",

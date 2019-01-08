@@ -5,12 +5,12 @@
      
     <mt-header fixed :title="tit"> 
         <mt-button class="iconfont icon-wode" slot="left" @click="wode()"></mt-button>
-        <mt-button class="iconfont icon-paobu" slot="right"></mt-button>
+        <mt-button class="iconfont icon-paobu" slot="right" @click="run()"></mt-button>
     </mt-header>
     <div class="middle">
     <!-- 训练时间 -->
     <div class="timer">
-        <router-link to="/myplan">
+        <router-link :to="{name:'myhistory',query:{time:hour}}">
         <p>训练时长</p>
             <div class="m-grade">
                 <h2>{{hour}}</h2>
@@ -22,13 +22,15 @@
         </router-link>
     </div>
     <!-- 每周排名 -->
-    <div class="ranking">
+    <router-link to="/myfriend">
+    <div class="ranking">   
         <p>本周好友排名</p>
         <div>
             <span class="iconfont icon-wode"></span>
             <span class="iconfont icon-qianjinxiayige"></span>
         </div>
     </div>
+    </router-link>
     <!-- 我的训练 -->
     <div class="my-train">
         <h3>我的训练</h3>
@@ -46,7 +48,7 @@
         </ul>
         <div class="vip">
             <p>想要训练更有效</p>
-            <mt-button type="default">获取会员专享内容</mt-button>
+            <mt-button type="default" @click="vip()">获取会员专享内容</mt-button>
         </div>
     </div>
     </div>
@@ -86,6 +88,12 @@ export default {
     methods:{
          wode(){
             this.$router.push("/mydetail")
+        },
+        run(){
+            this.$router.push("/myrun")
+        },
+        vip(){
+            this.$router.push("/myvip")
         }
     },
     mounted(){
