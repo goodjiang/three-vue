@@ -25,6 +25,7 @@ import Myfriendweek from "@/components/Myfriendweek"
 import Myfriendmonth from "@/components/Myfriendmonth"
 import Myaddfriend from "@/components/Myaddfriend"
 import Myvip from "@/components/Myvip"
+import Vippay from "@/components/Vippay"
 
 Vue.use(Router)
 
@@ -43,7 +44,7 @@ export default new Router({
         {
           path:"/train",
           component:Train,
-           redirect:"/tuijian",
+          redirect:"/tuijian",
           children:[
             {
               path:"/tuijian",
@@ -141,6 +142,10 @@ export default new Router({
     {
       path:"/jiaolian",
       component:Jiaolian
+    },
+    {
+      path:"/vippay",
+      component:Vippay
     }
     
    

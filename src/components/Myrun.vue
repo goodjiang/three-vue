@@ -5,17 +5,15 @@
             <mt-button class="iconfont icon-daohang"  slot="right"></mt-button>
         </mt-header>
         <div class="section">
-            <!-- <div class="freeRun">
+            <!-- ziyou -->
+            <div v-if="isShow1" id="1" class="freeRun">
                 <h2>
                     自由跑
                 </h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div> -->
-             <div class="freeRun">
+                
+            </div>
+            <!-- kaluli -->
+             <div v-if="isShow2" id="2" class="freeRun">
                
                     <p>卡路里跑</p>
                 <div>
@@ -23,12 +21,25 @@
                     <h5>100</h5>
                     <span>+</span> 
                 </div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+               
             </div>
+            <!-- 公里跑 -->
+              <div v-if="isShow3" id="3" class="freeRun">
+               
+                    <p>公里跑</p>
+                <div>
+                    <span>-</span>
+                    <h5>100</h5>
+                    <span>+</span> 
+                </div>
+                
+            </div>
+            <ul class="num">
+                    <li @click="first()"></li>
+                    <li @click="second()"></li>
+                    <li @click="third()"></li>
+            </ul>
+            <!-- shijian -->
             <div class="timer">
                 <dl>
                     <dt>— —</dt>
@@ -64,13 +75,32 @@ export default {
     name:"Myrun",
     data(){
         return{
-            tit:"户外跑步"
+            tit:"户外跑步",
+            isShow1:true,
+            isShow2:false,
+            isShow3:false,
         }
     },
     methods:{
         back(){
             this.$router.go(-1);
+        },
+        first(){
+            this.isShow1=true;
+            this.isShow2=false;
+            this.isShow3=false;
+        },
+        second(){
+            this.isShow1=false;
+            this.isShow2=true;
+            this.isShow3=false;
+        },
+        third(){
+            this.isShow1=false;
+            this.isShow2=false;
+            this.isShow3=true;
         }
+
     }
     
 }
@@ -111,11 +141,12 @@ export default {
     text-align: left;
     font-family: Arial-regular;
  }
- .freeRun ul{
+ .num{
      display: flex;
+     justify-content: center;
  }
- .freeRun ul li{
-    margin: 48px 5px 0;
+ .num li{
+    margin: 0 5px;
     width: 10px;
     height: 10px;
     line-height: 20px;

@@ -126,6 +126,7 @@ export default {
  .section{
      margin-top: 50px;
      flex: 1;
+     background: #fff;
  }
  .search{
     margin: 0 10px;
