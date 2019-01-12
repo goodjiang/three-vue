@@ -15,7 +15,6 @@ import Traincamp from "@/components/Traincamp"
 import Xly from "@/components/Xly"
 import Shihe from "@/components/Shihe"
 import Jiaolian from "@/components/Jiaolian"
-<<<<<<< HEAD
 import Mydetail from "@/components/Mydetail"
 import Mytrain from "@/components/Mytrain"
 import Mymethod from "@/components/Mymethod"
@@ -32,7 +31,6 @@ import Vipmes from "@/components/Vipmes"
 import Vipclasspay from "@/components/Vipclasspay"
 import Classpay from "@/components/Classpay"
 import Planpay from "@/components/Planpay"
-=======
 import Baoming from "@/components/Baoming"
 import Jingxuan from "@/components/Jingxuan"
 import Video from "@/components/Video"
@@ -54,7 +52,6 @@ import Login from "@/components/Login"
 import Register from "@/components/Register"
 import Wangjimima from "@/components/Wangjimima"
 import Kefu from "@/components/Kefu"
->>>>>>> 8f1a0d43a2380725b0ea54156a23d140a21098a0
 
 
 Vue.use(Router)
@@ -204,7 +201,7 @@ export default new Router({
       component:Jiaolian
     },
     {
-<<<<<<< HEAD
+
       path:"/vippay",
       component:Vippay
     },
@@ -233,10 +230,9 @@ export default new Router({
           component:Planpay
         }
       ]
-    }
+    },
     
-   
-=======
+   {
       path:"/baoming",
       component:Baoming
     },
@@ -301,7 +297,6 @@ export default new Router({
       path:"/kefu",
       component:Kefu,
     },
->>>>>>> 8f1a0d43a2380725b0ea54156a23d140a21098a0
   ]
 })
 
