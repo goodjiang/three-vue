@@ -26,6 +26,12 @@ import Myfriendmonth from "@/components/Myfriendmonth"
 import Myaddfriend from "@/components/Myaddfriend"
 import Myvip from "@/components/Myvip"
 import Vippay from "@/components/Vippay"
+import Vipclass from "@/components/Vipclass"
+import Vipmes from "@/components/Vipmes"
+import Vipclasspay from "@/components/Vipclasspay"
+import Classpay from "@/components/Classpay"
+import Planpay from "@/components/Planpay"
+
 
 Vue.use(Router)
 
@@ -146,6 +152,32 @@ export default new Router({
     {
       path:"/vippay",
       component:Vippay
+    },
+    {
+      path:"/vipclass",
+      name:"vipclass",
+      component:Vipclass
+    },
+    {
+      path:"/vipmes",
+      name:"vipmes",
+      component:Vipmes
+    },
+    {
+      path:"/vipclasspay",
+      redirect:"/classpay",
+      component:Vipclasspay,
+      children:[
+        {
+          path:"/classpay",
+         
+          component:Classpay
+        },
+        {
+          path:"/planpay",
+          component:Planpay
+        }
+      ]
     }
     
    

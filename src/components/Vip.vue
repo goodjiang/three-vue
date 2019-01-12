@@ -20,14 +20,16 @@
                 <h2>专享课程</h2>
                 <p>每月更新，惊喜不断</p>
                 <ul class="list-class">
-                    <li v-for="item in arr">
+                    <li v-for="(item,i) in arr" >
+                        <router-link :to="{name:'vipclass',query:{index:i,tit:item.tit}}">
                         <h3>
                             <img src="./../assets/Videotrain2.jpg" />
                         </h3>                      
                         <h4>
-                            <h6>普拉提直径系...</h6>
-                            <span>895665人训练过</span>
+                            <h6>{{item.tit}}</h6>
+                            <span>{{item.tId}}人训练过</span>
                         </h4>
+                        </router-link>
                     </li>
                 </ul>
                 <div> 
@@ -62,11 +64,22 @@
     </div>
 </template>
 <script>
+import axios from "axios"
+import Mock from "mockjs"
+Mock.mock("http://www.vip.com",{
+    data:{
+        "class|9":[{
+            "tit":"@ctitle(3, 5)",
+           
+            "tId|+78":8000
+        }],   
+    },
+})
 export default {
     name:"Vip",
     data(){
         return{
-            arr:[1,2,3,4,5,6,7,8,9],
+            arr:[],
             arr1:[1,2,3,4,5,6,7,8]
         }
     },
@@ -77,6 +90,17 @@ export default {
         vippay(){
             this.$router.push("/vippay")
         }
+    },
+    mounted(){
+        var _this=this
+        axios({
+            method:"get",
+            url:"http://www.vip.com"
+        }).then(function(data){
+            _this.arr=data.data.data.class
+           
+
+        })
     }
 }
 </script>
@@ -194,18 +218,18 @@ export default {
     height: 127px;
     box-sizing: border-box;
 }
-.list-class>li>h3{
+.list-class>li>a>h3{
     width: 106px;
     height: 70px;
     
 
 }
-.list-class>li>h3>img{
+.list-class>li>a>h3>img{
     width: 100%;
     height: 100%;
     border: 0;
 }
-.list-class>li>h4>h6{
+.list-class>li>a>h4>h6{
     height: 22px;
     color: rgba(51, 51, 51, 1);
     font-size: 14px;
@@ -214,7 +238,7 @@ export default {
     line-height: 22px;
     font-weight: normal;
 }
-.list-class>li>h4>span{
+.list-class>li>a>h4>span{
     width: 92px;
     height: 17px;
     color: rgba(121, 121, 121, 1);

@@ -5,9 +5,11 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
-
-
-
+import VideoPlayer from 'vue-video-player'
+//require('video.js/dist/video-js.css')
+//require('vue-video-player/src/custom-theme.css')
+//require('videojs-contrib-hls/dist/videojs-contrib-hls')
+Vue.use(VideoPlayer)
 Vue.use(MintUI)
 Vue.config.productionTip = false
 

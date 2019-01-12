@@ -87,7 +87,7 @@ export default {
     },
     mounted(){
         this.time=this.$route.query.time
-        console.log(this.$route.query.time)
+        
     }
 }
 </script>
