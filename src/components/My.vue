@@ -35,10 +35,10 @@
     <div class="my-train">
         <h3>我的训练</h3>
         <ul class="list1-train">
-            <li v-for="item in list1"><router-link :to="'/mytrain/'+item.trainId" >{{item.train}}</router-link></li>
+            <li v-for="(item,i) in list1" :key="i"><router-link :to="'/mytrain/'+item.trainId" >{{item.train}}</router-link></li>
         </ul>
         <ul class="list2-train">
-            <li v-for="item in list2">
+            <li v-for="(item,i) in list2" :key="i">
                 <router-link :to="'/mymethod/'+item.tId">
                     <h4>{{item.tit}}</h4>
                     <p>{{item.con}}</p>

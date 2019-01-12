@@ -21,7 +21,7 @@
                     </h3>
                     
                 </li>
-                <li v-for="(item,i) in arr"> 
+                <li v-for="(item,i) in arr" :key="i"> 
                     <h4>{{item.month}}个月</h4>
                     <div>
                         <p>月均{{item.price}}元</p> 
@@ -44,7 +44,7 @@
                 <h2>更多会员特权</h2>
                 <p>事项特权，尽享尊贵</p>
                 <ul class="list-special">
-                    <li v-for="item in arr1">
+                    <li v-for="(item,i) in arr1" :key="i">
                            <div></div>
                            <p>专项课程每月</p>
                     </li>

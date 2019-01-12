@@ -11,7 +11,7 @@
                 <span>全部评论({{count}})</span>
             </h2>
             <ul class="mes-list">
-                <li v-for="(item,i) in arr">
+                 <li v-for="(item,i) in arr" :key="i">
                     <h3>
                         <img :src="item.img" alt="">
                     </h3>

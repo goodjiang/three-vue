@@ -32,6 +32,10 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "mint-ui": "^2.2.13",
+<<<<<<< HEAD
+=======
+    "jquery": "^3.3.1",
+>>>>>>> ec35fbe175ca66c24a42f6048ea2a147786e7079
     "mockjs": "^1.0.1-beta3",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
@@ -53,7 +57,10 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "vue-video-player": "^5.0.2",
+<<<<<<< HEAD
     "vuex": "^3.0.1",
+=======
+>>>>>>> ec35fbe175ca66c24a42f6048ea2a147786e7079
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",

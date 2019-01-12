@@ -2,7 +2,7 @@
     <div>
        <div class="month">
        <ul>
-           <li v-for="item in username">
+           <li v-for="(item,i) in username" :key="i">
                <span class="iconfont icon-wode"></span>
                <p>{{item.name}}</p>
            </li>
