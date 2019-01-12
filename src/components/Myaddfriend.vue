@@ -52,7 +52,7 @@
             <div class="know">
                 <h3>你可能认识</h3>
                 <ul>
-                    <li v-for="item in arr" class="item-li">
+                    <li v-for="(item,i) in arr" :key="i" class="item-li">
                         <img class="head-img" src="./../assets/tuijian1.jpg"/>
                         <div class="d-item">
                             <span class="d-span">悠游</span>
@@ -67,7 +67,7 @@
             <!--FitTime推荐  -->
             <div class="fit">
                 <h3>FitTime推荐</h3>
-                <dl v-for="item in arr">
+                <dl v-for="(item,i) in arr" :key="i">
                     <dt class="item-li">
                         <img class="head-img" src="./../assets/tuijian1.jpg"/>
 

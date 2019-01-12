@@ -1,7 +1,7 @@
 <template>
     <div class="classpay">
         <ul class="price-list">
-            <li v-for="(item,i) in arr"> 
+            <li v-for="(item,i) in arr" :key="i"> 
                 <h4>{{item.month}}个月</h4>
                 <div>
                     <p>月均{{item.price}}元</p> 

@@ -6,18 +6,16 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
-<<<<<<< HEAD
-import VideoPlayer from 'vue-video-player'
-//require('video.js/dist/video-js.css')
-//require('vue-video-player/src/custom-theme.css')
-//require('videojs-contrib-hls/dist/videojs-contrib-hls')
-Vue.use(VideoPlayer)
-=======
 import "./assets/font/iconfont.css"
 import store from './store'
+import VideoPlayer from 'vue-video-player'
 
 
->>>>>>> 8f1a0d43a2380725b0ea54156a23d140a21098a0
+Vue.use(VideoPlayer)
+
+
+
+
 Vue.use(MintUI)
 Vue.config.productionTip = false
 

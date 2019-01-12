@@ -20,7 +20,7 @@
                 <h2>专享课程</h2>
                 <p>每月更新，惊喜不断</p>
                 <ul class="list-class">
-                    <li v-for="(item,i) in arr" >
+                    <li v-for="(item,i) in arr" :key="i">
                         <router-link :to="{name:'vipclass',query:{index:i,tit:item.tit}}">
                         <h3>
                             <img src="./../assets/Videotrain2.jpg" />
@@ -45,7 +45,7 @@
                 <h2>更多会员特权</h2>
                 <p>事项特权，尽享尊贵</p>
                 <ul class="list-special">
-                    <li v-for="item in arr1">
+                    <li v-for="(item,i) in arr1" :key="i">
                            <div></div>
                            <p>专项课程每月</p>
                     </li>
