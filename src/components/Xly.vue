@@ -105,7 +105,7 @@
             <ul>
                 <li><div><span>￥1099</span><span>1499</span></div></li>
                 <li>免费咨询</li>
-                <li>立即报名</li>
+                <li @click="btn4()">立即报名</li>
             </ul>
         </footer>
     </div>
@@ -122,6 +122,9 @@ export default {
         },
         btn3(){
             this.$router.push("/jiaolian")
+        },
+         btn4(){
+            this.$router.push("/baoming")
         }
     }
 }

@@ -2,8 +2,8 @@
     <div>
         <header>
             <mt-header title="训练营" style="font-size:18px">
-                <span slot="left" @click="btn1()" style="font-size:28px"> &lt;</span>
-                <span slot="left" @click="btn1()" style="font-size:28px;margin-left:10px">×</span>
+                <span slot="left" @click="btn2()" style="font-size:28px"> &lt;</span>
+                <span slot="left" @click="btn2()" style="font-size:28px;margin-left:10px">×</span>
             </mt-header>
         </header>
         <div class="work">
@@ -41,6 +41,9 @@ export default {
     methods: {
         btn1(){
             this.$router.push("/xly")
+        },
+        btn2(){
+            this.$router.push("/train")
         }
     },
 }
