@@ -69,7 +69,7 @@
                         <div>
                             <span><img src="../assets/tuijian3.jpg" alt=""></span>
                             <span> <img src="../assets/tuijian4.jpg" alt=""></span>
-                        <span> <img src="../assets/tuijian5.jpg" alt=""></span>
+                            <span> <img src="../assets/tuijian5.jpg" alt=""></span>
 
                         </div>        
                     </div>

@@ -14,7 +14,6 @@
 <script>
 export default {
     name:"Train",
-   
     methods:{
       tap(){
           console.log("aas")
